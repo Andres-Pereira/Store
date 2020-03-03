@@ -81,7 +81,7 @@ public class Order
 				}
 				totalItem = itemAmount - booksDiscount;
 			}
-			if (item.getProduct().getCategory() == ProductCategory.Bikes) 
+			if (ProductCategoryIsBikes(item)) 
 			{
 				// 20% discount for Bikes
 				totalItem = itemAmount - itemAmount * 20 / 100;
@@ -116,5 +116,10 @@ public class Order
 	private float getItemAmount(OrderItem item) 
 	{
 		return item.getProduct().getUnitPrice() * item.getQuantity();
+	}
+	
+	private boolean ProductCategoryIsBikes(OrderItem item) 
+	{
+		return item.getProduct().getCategory() == ProductCategory.Bikes;
 	}
 }
