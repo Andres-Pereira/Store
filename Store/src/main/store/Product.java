@@ -12,16 +12,16 @@ public class Product {
 	public ProductCategory categoria_producto;
 
 	/* The Image */
-	public ImageInfo image;
+	public ImageInfo foto_producto;
 
 	/* The Category */
-	public int unitsInStock;
+	public int stock_producto;
 
-	public Product(String nombre_producto, float precio_producto, ProductCategory categoria_producto, ImageInfo image) {
+	public Product(String nombre_producto, float precio_producto, ProductCategory categoria_producto, ImageInfo foto_producto) {
 		this.nombre_producto = nombre_producto;
 		this.precio_producto = precio_producto;
 		this.categoria_producto = categoria_producto;
-		this.image = image;
+		this.foto_producto = foto_producto;
 	}
 
 	public String getName() {
@@ -37,15 +37,15 @@ public class Product {
 	}
 
 	public ImageInfo getImage() {
-		return image;
+		return foto_producto;
 	}
 
 	public int getUnitsInStock() {
-		return unitsInStock;
+		return stock_producto;
 	}
 
-	public void setUnitsInStock(int unitsInStock) {
-		this.unitsInStock = unitsInStock;
+	public void setUnitsInStock(int stock_producto) {
+		this.stock_producto = stock_producto;
 	}
 
 	public String toXml() {
