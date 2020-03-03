@@ -99,13 +99,20 @@ public class Order
 
 		if (this.deliveryCountry == "USA")
 		{
-			// total=totalItems + tax + 0 shipping
-			return totalItems + totalItems * 5 / 100;
+			
+			return ItemTaxed();
 		}
 
-		// total=totalItemst + tax + 15 shipping
-		return totalItems + totalItems * 5 / 100 + 15;
+		// + 15 shipping
+		return ItemTaxed() + 15;
 	}
+	
+	private float ItemTaxed()
+	{
+		return totalItems + totalItems * 5 / 100;
+		
+	}
+	
 
 	private boolean ProductCategoryIsAccessories(OrderItem item) 
 	{
