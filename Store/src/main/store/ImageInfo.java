@@ -2,18 +2,18 @@ package store;
 
 public class ImageInfo {
 
-	public String path;
-
-	public ImageInfo(String path) {
-		this.path = path;
+	public String ruta_imagen;
+	
+	public ImageInfo(String ruta_imagen) {
+		this.ruta_imagen = ruta_imagen;
 	}
 
 	public String getPath() {
-		return path;
+		return ruta_imagen;
 	}
 
 	public String getImageType() {
-		return path.substring(path.indexOf(".") + 1);
+		return ruta_imagen.substring(path.indexOf(".") + 1);
 
 	}
 }
