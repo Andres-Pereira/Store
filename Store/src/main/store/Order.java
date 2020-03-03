@@ -83,10 +83,9 @@ public class Order
 			}
 			if (ProductCategoryIsBikes(item)) 
 			{
-				// 20% discount for Bikes
 				totalItem = itemAmount - itemAmount * 20 / 100;
 			}
-			if (item.getProduct().getCategory() == ProductCategory.Cloathing) 
+			if (ProductCategoryIsClothing(item)) 
 			{
 				float cloathingDiscount = 0;
 				if (item.getQuantity() > 2) 
@@ -121,5 +120,9 @@ public class Order
 	private boolean ProductCategoryIsBikes(OrderItem item) 
 	{
 		return item.getProduct().getCategory() == ProductCategory.Bikes;
+	}
+	private boolean ProductCategoryIsClothing(OrderItem item) 
+	{
+		return item.getProduct().getCategory() == ProductCategory.Cloathing;
 	}
 }
