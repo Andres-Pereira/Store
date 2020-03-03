@@ -3,13 +3,13 @@ package store;
 public class Product {
 
 	/* The Name */
-	public String name;
+	public String nombre_producto;
 
 	/* The UnitPrice */
-	public float unitPrice;
+	public float precio_producto;
 
 	/* The Category */
-	public ProductCategory category;
+	public ProductCategory categoria_producto;
 
 	/* The Image */
 	public ImageInfo image;
@@ -17,23 +17,23 @@ public class Product {
 	/* The Category */
 	public int unitsInStock;
 
-	public Product(String name, float unitPrice, ProductCategory category, ImageInfo image) {
-		this.name = name;
-		this.unitPrice = unitPrice;
-		this.category = category;
+	public Product(String nombre_producto, float precio_producto, ProductCategory categoria_producto, ImageInfo image) {
+		this.nombre_producto = nombre_producto;
+		this.precio_producto = precio_producto;
+		this.categoria_producto = categoria_producto;
 		this.image = image;
 	}
 
 	public String getName() {
-		return name;
+		return nombre_producto;
 	}
 
 	public float getUnitPrice() {
-		return unitPrice;
+		return precio_producto;
 	}
 
 	public ProductCategory getCategory() {
-		return category;
+		return categoria_producto;
 	}
 
 	public ImageInfo getImage() {
@@ -49,7 +49,7 @@ public class Product {
 	}
 
 	public String toXml() {
-		return "<product>" + "<name>" + name + "</name>" + "<category>"
-				+ category + "</category>" + "</product>";
+		return "<product>" + "<name>" + nombre_producto + "</name>" + "<category>"
+				+ categoria_producto + "</category>" + "</product>";
 	}
 }
