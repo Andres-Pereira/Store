@@ -2,20 +2,12 @@ package store;
 
 public class Product {
 
-	/* The Name */
 	public String nombre_producto;
-
-	/* The UnitPrice */
 	public float precio_producto;
-
-	/* The Category */
 	public ProductCategory categoria_producto;
-
-	/* The Image */
 	public ImageInfo foto_producto;
-
-	/* The Category */
 	public int stock_producto;
+	
 
 	public Product(String nombre_producto, float precio_producto, ProductCategory categoria_producto, ImageInfo foto_producto) {
 		this.nombre_producto = nombre_producto;
