@@ -77,13 +77,13 @@ public class Order
 				float booksDiscount = 0;
 				if (itemAmount >= 100) 
 				{
-					booksDiscount = itemAmount * 10 / 100;
+					booksDiscount = ItemDiscount(itemAmount,10);
 				}
 				totalItem = itemAmount - booksDiscount;
 			}
 			if (ProductCategoryIsBikes(item)) 
 			{
-				totalItem = itemAmount - itemAmount * 20 / 100;
+				totalItem = itemAmount - ItemDiscount(itemAmount,20);
 			}
 			if (ProductCategoryIsClothing(item)) 
 			{
@@ -113,6 +113,11 @@ public class Order
 		
 	}
 	
+	private float ItemDiscount(int itemAmount,int percentage)
+	{
+		return itemAmount * percentage / 100;
+		
+	}
 
 	private boolean ProductCategoryIsAccessories(OrderItem item) 
 	{
